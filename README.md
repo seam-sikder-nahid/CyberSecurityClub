@@ -42,8 +42,8 @@ SOFTWARE.
  -  Total Additions (code lines)
  -  Total Deletion (Code lines)
  
+<img width="534" height="122" alt="image" src="https://github.com/user-attachments/assets/752fa47d-6b9c-44e8-8b06-e61cb43a107a" />
 
-<img width="606" height="112" alt="Image" src="https://github.com/user-attachments/assets/4b15ba8b-6d02-4754-a8ea-04aaa8cd6496" />
 
 ### Who can contribute?
  - Only **Uttara University** students can contribute to this project
