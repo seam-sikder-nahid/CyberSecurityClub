@@ -32,6 +32,28 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ---
+## Contribute
+### **New Method has been implemented**
+- Now those who have contributed to this site can be contributors
+- Their avatar will automatically show in the footer of the website
 
+### Features:
+ -  Total Commits
+ -  Total Additions (code lines)
+ -  Total Deletion (Code lines)
+ 
+
+<img width="606" height="112" alt="Image" src="https://github.com/user-attachments/assets/4b15ba8b-6d02-4754-a8ea-04aaa8cd6496" />
+
+### Who can contribute?
+ - Only **Uttara University** students can contribute to this project
+
+### How To Become A Contributor?
+ - Fork the repository [Cyber Security Club, Uttara university](https://github.com/Cyber-Security-Club-Uttara-University/CyberSecurityClub)
+ - Create a feature branch
+ - Commit your changes
+ - Open a pull request
+
+### ✨ Every contribution matters, no matter how big or small. Thank you for being a part of Cyber Family!
 **Developed by [pran0x](https://github.com/pran0x) for Cyber Security Club - Uttara University**
 
