@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Complete Guide to OWASP Top 10 Vulnerabilities | CSC Blog</title>
+  <meta name="description" content="A comprehensive walkthrough of the OWASP Top 10 web application security risks with practical examples and mitigation strategies.">
+  <meta name="keywords" content="OWASP Top 10, web security, penetration testing, security vulnerabilities">
+  <meta property="og:title" content="Complete Guide to OWASP Top 10 Vulnerabilities">
+  <meta property="og:description" content="Learn about the OWASP Top 10 web security vulnerabilities with practical examples.">
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../NewsPortal/news-portal.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="header">
+    <div class="header-wrapper">
+      <div class="header-image-container">
+        <a rel="author" href="../index.html" title="Cyber Security Club Homepage">
+          <div class="header-image"></div>
+        </a>
+      </div>
+      <ul class="navbar-links">
+        <li><a href="../index.html"><span class="navbar-slash">|</span>Home</a></li>
+        <li><a href="../about.html"><span class="navbar-slash">|</span>About</a></li>
+        <li><a href="../advisor.html"><span class="navbar-slash">|</span>Advisor</a></li>
+        <li class="dropdown">
+          <a href="../CTF.html"><span class="navbar-slash">|</span><span>CTF</span></a>
+          <div class="dropdown-content">
+            <a href="http://ctf-cybersecurity-club-uttara.duckdns.org/scoreboard">Dashboard</a>
+            <a href="../CTFWeekly.html">Weekly CTFs</a>
+            <a href="../CTFMonthly.html">Monthly CTFs</a>
+            <a href="../CTFWriteups.html">Writeups</a>
+          </div>
+        </li>
+        <li><a href="../events.html"><span class="navbar-slash">|</span>Events</a></li>
+        <li><a href="../gallery.html"><span class="navbar-slash">|</span>Gallery</a></li>
+        <li><a href="../groups.html"><span class="navbar-slash">|</span>Groups</a></li>
+        <li><a href="../resources.html"><span class="navbar-slash">|</span>Resources</a></li>
+        <li><a href="../sponsors.html"><span class="navbar-slash">|</span>Sponsors</a></li>
+        <li class="dropdown">
+          <a href="#" class="active-nav-link">
+            <span class="navbar-slash">|</span>
+            <span>Article</span>
+          </a>
+          <div class="dropdown-content">
+            <a href="../NewsPortal/News.html">News</a>
+            <a href="../NewsPortal/News.html#highlights">Highlights</a>
+            <a href="../blog.html">Blog</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="../MemberShip.html"><span class="navbar-slash">|</span><span>Membership</span></a>
+          <div class="dropdown-content">
+            <a href="../MemberShip.html">Membership Process</a>
+            <a href="../recruitment.html">Join Us</a>
+          </div>
+        </li>
+      </ul>
+      <div class="navbar-controls">
+        <div class="navbar-burger">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="news-detail-main" id="main-content">
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="../blog.html">Blog</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">OWASP Top 10 Guide</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Article -->
+    <article class="news-article">
+      <div class="container">
+        <header class="article-header">
+          <div class="article-meta">
+            <span class="article-category">Tutorial</span>
+            <span class="article-date"><i class="fas fa-calendar"></i> October 5, 2025</span>
+            <span class="article-author"><i class="fas fa-user"></i> Md. Pranoy Rahman</span>
+            <span class="article-date"><i class="fas fa-clock"></i> 15 min read</span>
+          </div>
+          <h1 class="article-title">Complete Guide to OWASP Top 10 Vulnerabilities</h1>
+        </header>
+
+        <div class="article-image">
+          <img src="../assets/images/blog/web-security.jpg" alt="OWASP Top 10 Vulnerabilities">
+        </div>
+
+        <div class="article-content">
+          <div class="article-text">
+            <p><strong>The OWASP Top 10</strong> is a standard awareness document for developers and web application security professionals. It represents a broad consensus about the most critical security risks to web applications.</p>
+
+            <h3>1. Broken Access Control</h3>
+            <p>Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, or destruction of all data or performing a business function outside the user's limits.</p>
+
+            <p><strong>Common Examples:</strong></p>
+            <ul>
+              <li>Violation of the principle of least privilege or deny by default</li>
+              <li>Bypassing access control checks by modifying the URL, internal application state, or the HTML page</li>
+              <li>Permitting viewing or editing someone else's account by providing its unique identifier (insecure direct object references)</li>
+              <li>Accessing API with missing access controls for POST, PUT and DELETE</li>
+            </ul>
+
+            <p><strong>How to Prevent:</strong></p>
+            <ul>
+              <li>Implement access control mechanisms and enforce them throughout the application</li>
+              <li>Deny by default - except for public resources, deny access by default</li>
+              <li>Use a centralized access control mechanism</li>
+              <li>Log access control failures and alert admins when appropriate</li>
+            </ul>
+
+            <h3>2. Cryptographic Failures</h3>
+            <p>Previously known as Sensitive Data Exposure, this category focuses on failures related to cryptography (or lack thereof) which often leads to exposure of sensitive data.</p>
+
+            <p><strong>Common Examples:</strong></p>
+            <ul>
+              <li>Transmitting data in clear text (HTTP, SMTP, FTP)</li>
+              <li>Using old or weak cryptographic algorithms</li>
+              <li>Using default crypto keys, weak keys, or reusing keys</li>
+              <li>Not enforcing encryption (e.g., missing security headers)</li>
+            </ul>
+
+            <p><strong>Prevention Methods:</strong></p>
+            <ul>
+              <li>Classify data processed, stored, or transmitted by an application</li>
+              <li>Don't store sensitive data unnecessarily</li>
+              <li>Encrypt all sensitive data at rest and in transit</li>
+              <li>Use up-to-date and strong algorithms, protocols, and keys</li>
+              <li>Disable caching for responses containing sensitive data</li>
+            </ul>
+
+            <h3>3. Injection</h3>
+            <p>Injection flaws, such as SQL, NoSQL, OS, and LDAP injection, occur when untrusted data is sent to an interpreter as part of a command or query. The attacker's hostile data can trick the interpreter into executing unintended commands or accessing data without proper authorization.</p>
+
+            <p><strong>SQL Injection Example:</strong></p>
+            <pre><code>// Vulnerable Code
+String query = "SELECT * FROM users WHERE username = '" + username + "' AND password = '" + password + "'";
+
+// Attacker Input: username = admin'--
+// Resulting Query: SELECT * FROM users WHERE username = 'admin'--' AND password = ''
+// The -- comments out the rest, bypassing password check</code></pre>
+
+            <p><strong>Prevention:</strong></p>
+            <ul>
+              <li>Use parameterized queries (prepared statements)</li>
+              <li>Use ORM frameworks that handle queries securely</li>
+              <li>Validate and sanitize all user inputs</li>
+              <li>Use allowlist input validation</li>
+              <li>Escape special characters using specific escape syntax</li>
+            </ul>
+
+            <h3>4. Insecure Design</h3>
+            <p>Insecure design is a broad category representing different weaknesses, expressed as "missing or ineffective control design." An insecure design cannot be fixed by a perfect implementation as by definition, needed security controls were never created to defend against specific attacks.</p>
+
+            <p><strong>How to Prevent:</strong></p>
+            <ul>
+              <li>Establish and use a secure development lifecycle with security professionals</li>
+              <li>Establish and use a library of secure design patterns</li>
+              <li>Use threat modeling for critical authentication, access control, business logic, and key flows</li>
+              <li>Integrate security language and controls into user stories</li>
+            </ul>
+
+            <h3>5. Security Misconfiguration</h3>
+            <p>Security misconfiguration is the most commonly seen issue. This is commonly a result of insecure default configurations, incomplete or ad hoc configurations, open cloud storage, misconfigured HTTP headers, and verbose error messages containing sensitive information.</p>
+
+            <p><strong>Common Issues:</strong></p>
+            <ul>
+              <li>Missing appropriate security hardening</li>
+              <li>Unnecessary features enabled or installed</li>
+              <li>Default accounts with unchanged passwords</li>
+              <li>Overly informative error messages revealing system details</li>
+              <li>Latest security features are disabled or not configured securely</li>
+            </ul>
+
+            <h3>6. Vulnerable and Outdated Components</h3>
+            <p>Components, such as libraries, frameworks, and other software modules, run with the same privileges as the application. If a vulnerable component is exploited, such an attack can facilitate serious data loss or server takeover.</p>
+
+            <p><strong>Prevention Steps:</strong></p>
+            <ul>
+              <li>Remove unused dependencies, unnecessary features, components, files, and documentation</li>
+              <li>Continuously inventory versions of both client-side and server-side components</li>
+              <li>Only obtain components from official sources over secure links</li>
+              <li>Monitor for libraries and components that are unmaintained or do not create security patches</li>
+            </ul>
+
+            <h3>7. Identification and Authentication Failures</h3>
+            <p>Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. Application functions related to authentication and session management are often implemented incorrectly.</p>
+
+            <p><strong>Common Weaknesses:</strong></p>
+            <ul>
+              <li>Permits brute force or other automated attacks</li>
+              <li>Permits weak or well-known passwords</li>
+              <li>Uses weak or ineffective credential recovery processes</li>
+              <li>Uses plain text, encrypted, or weakly hashed passwords</li>
+              <li>Missing or ineffective multi-factor authentication</li>
+            </ul>
+
+            <h3>8. Software and Data Integrity Failures</h3>
+            <p>Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example is where an application relies upon plugins, libraries, or modules from untrusted sources.</p>
+
+            <p><strong>How to Prevent:</strong></p>
+            <ul>
+              <li>Use digital signatures to verify software or data is from expected source</li>
+              <li>Ensure libraries and dependencies are consuming trusted repositories</li>
+              <li>Use software supply chain security tools</li>
+              <li>Ensure there is a review process for code and configuration changes</li>
+            </ul>
+
+            <h3>9. Security Logging and Monitoring Failures</h3>
+            <p>Without logging and monitoring, breaches cannot be detected. Insufficient logging, detection, monitoring, and active response occurs any time logging and alerting are ineffective or missing.</p>
+
+            <p><strong>Best Practices:</strong></p>
+            <ul>
+              <li>Ensure all login, access control, and server-side input validation failures can be logged</li>
+              <li>Ensure logs are generated in a format that log management solutions can easily consume</li>
+              <li>Ensure log data is encoded correctly to prevent injections or attacks</li>
+              <li>Establish effective monitoring and alerting</li>
+              <li>Establish or adopt an incident response and recovery plan</li>
+            </ul>
+
+            <h3>10. Server-Side Request Forgery (SSRF)</h3>
+            <p>SSRF flaws occur whenever a web application is fetching a remote resource without validating the user-supplied URL. It allows an attacker to coerce the application to send a crafted request to an unexpected destination.</p>
+
+            <p><strong>Prevention Measures:</strong></p>
+            <ul>
+              <li>Sanitize and validate all client-supplied input data</li>
+              <li>Enforce URL schema, port, and destination with a positive allow list</li>
+              <li>Do not send raw responses to clients</li>
+              <li>Disable HTTP redirections</li>
+              <li>Implement network segmentation to reduce SSRF impact</li>
+            </ul>
+
+            <h3>Conclusion</h3>
+            <p>Understanding and mitigating OWASP Top 10 vulnerabilities is essential for building secure web applications. Regular security assessments, code reviews, and keeping up-to-date with the latest security practices are crucial steps in maintaining application security.</p>
+
+            <p>Remember, security is not a one-time effort but a continuous process. Stay informed, stay vigilant, and always prioritize security in your development lifecycle.</p>
+          </div>
+
+          <!-- Article Tags -->
+          <div class="article-tags">
+            <h4>Tags</h4>
+            <div class="tag-list">
+              <span class="tag">Web Security</span>
+              <span class="tag">OWASP</span>
+              <span class="tag">Penetration Testing</span>
+              <span class="tag">Security Best Practices</span>
+              <span class="tag">Tutorial</span>
+            </div>
+          </div>
+
+          <!-- Share Section -->
+          <div class="article-share">
+            <h4>Share this article</h4>
+            <div class="share-buttons">
+              <a href="#" class="share-btn facebook" onclick="shareOnFacebook(); return false;">
+                <i class="fab fa-facebook-f"></i> Facebook
+              </a>
+              <a href="#" class="share-btn twitter" onclick="shareOnTwitter(); return false;">
+                <i class="fab fa-twitter"></i> Twitter
+              </a>
+              <a href="#" class="share-btn linkedin" onclick="shareOnLinkedIn(); return false;">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </a>
+              <a href="#" class="share-btn copy" onclick="copyLink(); return false;">
+                <i class="fas fa-link"></i> Copy Link
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Related Articles -->
+    <section class="related-news">
+      <div class="container">
+        <h2 class="section-title">Related Articles</h2>
+        <div class="related-news-grid">
+          <article class="related-news-card">
+            <div class="related-news-image">
+              <img src="../assets/images/blog/python-security.jpg" alt="Python Security">
+            </div>
+            <div class="related-news-content">
+              <h3 class="related-news-title">Python Scripting for Penetration Testing</h3>
+              <p class="related-news-date"><i class="fas fa-calendar"></i> Sep 28, 2025</p>
+              <a href="python-security.html" class="related-news-link">Read More →</a>
+            </div>
+          </article>
+
+          <article class="related-news-card">
+            <div class="related-news-image">
+              <img src="../assets/images/blog/burp-suite.jpg" alt="Burp Suite">
+            </div>
+            <div class="related-news-content">
+              <h3 class="related-news-title">Burp Suite Pro: Advanced Web Testing</h3>
+              <p class="related-news-date"><i class="fas fa-calendar"></i> Sep 23, 2025</p>
+              <a href="burp-suite-guide.html" class="related-news-link">Read More →</a>
+            </div>
+          </article>
+
+          <article class="related-news-card">
+            <div class="related-news-image">
+              <img src="../assets/images/blog/linux-basics.jpg" alt="Linux Basics">
+            </div>
+            <div class="related-news-content">
+              <h3 class="related-news-title">Linux Command Line Basics for Cybersecurity</h3>
+              <p class="related-news-date"><i class="fas fa-calendar"></i> Oct 4, 2025</p>
+              <a href="linux-basics.html" class="related-news-link">Read More →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Blog -->
+    <section class="back-to-news">
+      <div class="container">
+        <a href="../blog.html" class="back-btn">
+          <i class="fas fa-arrow-left"></i>
+          Back to All Articles
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scroll to Top -->
+  <div class="scroll-to-top" id="scrollToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-wrapper">
+      <div class="footer-info-container">
+        <div class="footer-title-container">
+          <div class="footer-title">
+            <p>Cyber Security Club, Uttara University</p>
+          </div>
+          <a class="email" href="mailto:cybersecurity@club.uttara.ac.bd">
+            <div class="mail">
+              <span>Contact@CyberSecurityClub</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="footer-social-container">
+        <a class="social-link" rel="me" target="_blank" href="https://facebook.com/csc.uu.bd">
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a class="social-link" rel="me" target="_blank" href="https://www.linkedin.com/company/cscuu/?viewAsMember=true">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a class="social-link" rel="me" target="_blank" href="https://discord.gg/N83SjBHjzG">
+          <i class="fa-brands fa-discord"></i>
+        </a>
+      </div>
+      <div class="site-credit">
+        ©2025 | All rights reserved by Cyber Security Club, Uttara University
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="../assets/js/index.js"></script>
+  <script>
+    // Share functions
+    function shareOnFacebook() {
+      const url = window.location.href;
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+    }
+
+    function shareOnTwitter() {
+      const url = window.location.href;
+      const text = document.querySelector('.article-title').textContent;
+      window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    function shareOnLinkedIn() {
+      const url = window.location.href;
+      window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+    }
+
+    function copyLink() {
+      const url = window.location.href;
+      navigator.clipboard.writeText(url).then(() => {
+        alert('Link copied to clipboard!');
+      });
+    }
+
+    // Scroll to top
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+
+</html>
