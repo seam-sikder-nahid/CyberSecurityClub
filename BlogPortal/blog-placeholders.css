@@ -1,0 +1,94 @@
+/* ========================================
+   BLOG PLACEHOLDER IMAGES
+   These are CSS-based placeholder images
+   Replace with actual images when available
+   ======================================== */
+
+/* Create placeholder image backgrounds */
+.blog-card-image img[src*="web-security.jpg"],
+.featured-blog-image img[src*="web-security.jpg"] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  object-fit: cover;
+}
+
+.blog-card-image img[src*="ctf-writeup.jpg"],
+.featured-blog-image img[src*="ctf-writeup.jpg"] {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  object-fit: cover;
+}
+
+.blog-card-image img[src*="linux-basics.jpg"] {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  object-fit: cover;
+}
+
+.blog-card-image img[src*="binary-exploitation.jpg"] {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  object-fit: cover;
+}
+
+.blog-card-image img[src*="malware-analysis.jpg"] {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  object-fit: cover;
+}
+
+.blog-card-image img[src*="python-security.jpg"] {
+  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+  object-fit: cover;
+}
+
+.blog-card-image img[src*="security-news.jpg"] {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  object-fit: cover;
+}
+
+.blog-card-image img[src*="burp-suite.jpg"] {
+  background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);
+  object-fit: cover;
+}
+
+/* Fallback for missing images */
+.blog-card-image img:not([src]),
+.blog-card-image img[src=""],
+.featured-blog-image img:not([src]),
+.featured-blog-image img[src=""] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100%;
+}
+
+/* Add a subtle pattern overlay to placeholder images */
+.blog-card-image::after,
+.featured-blog-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.05) 10px,
+      rgba(255, 255, 255, 0.05) 20px
+    );
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* Icon overlay for placeholder images */
+.blog-card-image::before,
+.featured-blog-image::before {
+  content: '\f1c5'; /* FontAwesome file icon */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+  pointer-events: none;
+}
