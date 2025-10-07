@@ -1,1 +1,731 @@
-COMING SOON!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberCon25 - Premier Cybersecurity Conference by Cyber Security Club - Uttara University</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="cybercon-style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">
+                <img src="Assets/images/logo/CyberCon.png" alt="CyberCon 2025" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#speakers">SPEAKERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#schedule">SCHEDULE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#villages">VILLAGES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sponsors">SPONSORS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-register" href="#register">REGISTER NOW</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title animate-text">
+                        CYBER<span class="highlight">CON</span> <span class="year">2025</span>
+                    </h1>
+                    <p class="hero-subtitle">The Ultimate Cybersecurity Conference</p>
+                    <div class="hero-details">
+                        <div class="detail-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>September 15-17, 2025</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>University of Utah, Salt Lake City</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#register" class="btn btn-primary-custom">Register Now</a>
+                        <a href="#about" class="btn btn-outline-custom">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-particles" id="particles"></div>
+    </section>
+
+    <!-- Theme Section -->
+    <section id="theme" class="theme-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">CyberCon25 Theme</h2>
+                    <h3 class="theme-title">NEXT-GEN OFFENSIVE</h3>
+                    <p class="theme-description">
+                        Exploring the frontier of AI-powered security, quantum cryptography, and zero-trust architecture. 
+                        As cyber threats evolve with machine learning and automation, defenders must adapt with cutting-edge 
+                        strategies and innovative solutions. Join us as we dive deep into the future of cybersecurity.
+                    </p>
+                    <div class="theme-highlights">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="highlight-card">
+                                    <i class="fas fa-brain"></i>
+                                    <h4>AI & ML Security</h4>
+                                    <p>Defending against and leveraging artificial intelligence</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="highlight-card">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <h4>Zero Trust</h4>
+                                    <p>Implementing next-generation security frameworks</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="highlight-card">
+                                    <i class="fas fa-atom"></i>
+                                    <h4>Quantum Security</h4>
+                                    <p>Preparing for post-quantum cryptography</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Feed Section -->
+    <section id="news" class="news-section">
+        <div class="container">
+            <h2 class="section-title text-center">Recent News</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="../assets/images/CTF/image.png" alt="News">
+                            <div class="news-date">Oct 01, 2025</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>First Round of Speakers Announced!</h3>
+                            <p>We're excited to reveal the first wave of world-class speakers joining CyberCon 2025. 
+                            From AI security to cloud defense, these experts will share cutting-edge insights.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="../assets/images/CTF/image.png" alt="News">
+                            <div class="news-date">Sep 25, 2025</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>CTF Registration Now Open</h3>
+                            <p>Sign up for the CyberCon CTF Challenge! Test your skills against the best hackers and 
+                            compete for amazing prizes and bragging rights.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="../assets/images/CTF/image.png" alt="News">
+                            <div class="news-date">Sep 15, 2025</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>Villages Lineup Revealed</h3>
+                            <p>Check out this year's interactive villages featuring hands-on workshops in IoT hacking, 
+                            red teaming, lock picking, and more!</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section id="speakers" class="speakers-section">
+        <div class="container">
+            <h2 class="section-title text-center">Featured Speakers</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="speaker-card">
+                        <div class="speaker-image">
+                            <img src="../assets/images/2025eboard/pran0x.jpg" alt="Speaker">
+                            <div class="speaker-overlay">
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="speaker-info">
+                            <h4>Dr. Sarah Chen</h4>
+                            <p class="speaker-title">AI Security Researcher</p>
+                            <p class="speaker-company">MIT CSAIL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="speaker-card">
+                        <div class="speaker-image">
+                            <img src="../assets/images/2025eboard/Ashiq.jpeg" alt="Speaker">
+                            <div class="speaker-overlay">
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="speaker-info">
+                            <h4>Marcus Wright</h4>
+                            <p class="speaker-title">Red Team Lead</p>
+                            <p class="speaker-company">CrowdStrike</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="speaker-card">
+                        <div class="speaker-image">
+                            <img src="../assets/images/2025eboard/Said.jpeg" alt="Speaker">
+                            <div class="speaker-overlay">
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="speaker-info">
+                            <h4>Lisa Anderson</h4>
+                            <p class="speaker-title">Cloud Security Architect</p>
+                            <p class="speaker-company">Microsoft Azure</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="speaker-card">
+                        <div class="speaker-image">
+                            <img src="../assets/images/2025eboard/Shawon.jpeg" alt="Speaker">
+                            <div class="speaker-overlay">
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="speaker-info">
+                            <h4>James Rodriguez</h4>
+                            <p class="speaker-title">Penetration Tester</p>
+                            <p class="speaker-company">Offensive Security</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Villages Section -->
+    <section id="villages" class="villages-section">
+        <div class="container">
+            <h2 class="section-title text-center">Interactive Villages</h2>
+            <p class="section-subtitle text-center">Hands-on Learning Experiences</p>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="village-card">
+                        <div class="village-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h4>Bug Bounty Village</h4>
+                        <p>Learn from top bug bounty hunters and practice finding vulnerabilities in real-world applications.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="village-card">
+                        <div class="village-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h4>Hardware Hacking Village</h4>
+                        <p>Dive into IoT security, reverse engineering, and hardware exploitation techniques.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="village-card">
+                        <div class="village-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h4>Lock Picking Village</h4>
+                        <p>Master the art of physical security and lock manipulation with expert guidance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="village-card">
+                        <div class="village-icon">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <h4>Red Team Village</h4>
+                        <p>Offensive security tactics, adversary simulation, and penetration testing workshops.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="village-card">
+                        <div class="village-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h4>Car Hacking Village</h4>
+                        <p>Explore automotive cybersecurity and learn about vehicle network exploitation.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="village-card">
+                        <div class="village-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h4>OSINT Village</h4>
+                        <p>Open-source intelligence gathering techniques and tools for investigators.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule-section">
+        <div class="container">
+            <h2 class="section-title text-center">Event Schedule</h2>
+            <div class="schedule-tabs">
+                <ul class="nav nav-pills justify-content-center mb-5" id="scheduleTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="day1-tab" data-bs-toggle="pill" data-bs-target="#day1">Day 1 - Sep 15</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="day2-tab" data-bs-toggle="pill" data-bs-target="#day2">Day 2 - Sep 16</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="day3-tab" data-bs-toggle="pill" data-bs-target="#day3">Day 3 - Sep 17</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="scheduleTabContent">
+                    <div class="tab-pane fade show active" id="day1">
+                        <div class="schedule-item">
+                            <div class="schedule-time">09:00 AM</div>
+                            <div class="schedule-content">
+                                <h4>Opening Keynote</h4>
+                                <p class="speaker-name">Dr. Sarah Chen</p>
+                                <p>The Future of AI in Cybersecurity</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">10:30 AM</div>
+                            <div class="schedule-content">
+                                <h4>Workshop Session</h4>
+                                <p class="speaker-name">Marcus Wright</p>
+                                <p>Advanced Red Teaming Techniques</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">12:00 PM</div>
+                            <div class="schedule-content">
+                                <h4>Lunch Break & Networking</h4>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">02:00 PM</div>
+                            <div class="schedule-content">
+                                <h4>Technical Talk</h4>
+                                <p class="speaker-name">Lisa Anderson</p>
+                                <p>Zero Trust Architecture in Cloud Environments</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">04:00 PM</div>
+                            <div class="schedule-content">
+                                <h4>CTF Competition Begins</h4>
+                                <p>Capture The Flag Challenge - Day 1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="day2">
+                        <div class="schedule-item">
+                            <div class="schedule-time">09:00 AM</div>
+                            <div class="schedule-content">
+                                <h4>Morning Keynote</h4>
+                                <p class="speaker-name">James Rodriguez</p>
+                                <p>Modern Penetration Testing Methodologies</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">10:30 AM</div>
+                            <div class="schedule-content">
+                                <h4>Village Sessions</h4>
+                                <p>Hands-on workshops across all villages</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">12:00 PM</div>
+                            <div class="schedule-content">
+                                <h4>Lunch Break & Networking</h4>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">02:00 PM</div>
+                            <div class="schedule-content">
+                                <h4>Panel Discussion</h4>
+                                <p>The State of Cybersecurity in 2025</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">04:00 PM</div>
+                            <div class="schedule-content">
+                                <h4>CTF Competition Continues</h4>
+                                <p>Advanced challenges released</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="day3">
+                        <div class="schedule-item">
+                            <div class="schedule-time">09:00 AM</div>
+                            <div class="schedule-content">
+                                <h4>Final Day Keynote</h4>
+                                <p>Industry leaders roundtable</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">11:00 AM</div>
+                            <div class="schedule-content">
+                                <h4>Lightning Talks</h4>
+                                <p>Quick-fire presentations from community members</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">12:00 PM</div>
+                            <div class="schedule-content">
+                                <h4>Lunch Break</h4>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">02:00 PM</div>
+                            <div class="schedule-content">
+                                <h4>CTF Finals & Awards</h4>
+                                <p>Final challenges and prize ceremony</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">04:00 PM</div>
+                            <div class="schedule-content">
+                                <h4>Closing Ceremony</h4>
+                                <p>Thank you and see you next year!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="sponsors-section">
+        <div class="container">
+            <h2 class="section-title text-center">Our Sponsors</h2>
+            <p class="section-subtitle text-center">Thank you to our amazing partners</p>
+            
+            <div class="sponsor-tier">
+                <h3 class="tier-title">Platinum Sponsors</h3>
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="sponsor-card platinum">
+                            <img src="../assets/images/sponsor/sponsor-logo.png" alt="Sponsor" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="sponsor-card platinum">
+                            <img src="../assets/images/sponsor/sponsor-logo.png" alt="Sponsor" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsor-tier">
+                <h3 class="tier-title">Gold Sponsors</h3>
+                <div class="row justify-content-center">
+                    <div class="col-lg-2 col-md-3 col-6 mb-4">
+                        <div class="sponsor-card gold">
+                            <img src="../assets/images/sponsor/sponsor-logo.png" alt="Sponsor" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-6 mb-4">
+                        <div class="sponsor-card gold">
+                            <img src="../assets/images/sponsor/sponsor-logo.png" alt="Sponsor" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-6 mb-4">
+                        <div class="sponsor-card gold">
+                            <img src="../assets/images/sponsor/sponsor-logo.png" alt="Sponsor" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsor-tier">
+                <h3 class="tier-title">Silver Sponsors</h3>
+                <div class="row justify-content-center">
+                    <div class="col-lg-2 col-md-3 col-6 mb-3">
+                        <div class="sponsor-card silver">
+                            <img src="../assets/images/sponsor/sponsor-logo.png" alt="Sponsor" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-6 mb-3">
+                        <div class="sponsor-card silver">
+                            <img src="../assets/images/sponsor/sponsor-logo.png" alt="Sponsor" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-6 mb-3">
+                        <div class="sponsor-card silver">
+                            <img src="../assets/images/sponsor/sponsor-logo.png" alt="Sponsor" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-6 mb-3">
+                        <div class="sponsor-card silver">
+                            <img src="../assets/images/sponsor/sponsor-logo.png" alt="Sponsor" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="register-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Register for CyberCon 2025</h2>
+                    <p class="section-subtitle">Secure your spot at the premier cybersecurity event</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4 mb-4">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Student Pass</h3>
+                            <div class="price">$99</div>
+                            <p>For students with valid ID</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Access to all talks</li>
+                            <li><i class="fas fa-check"></i> Village access</li>
+                            <li><i class="fas fa-check"></i> CTF participation</li>
+                            <li><i class="fas fa-check"></i> Conference swag</li>
+                            <li><i class="fas fa-times"></i> Workshop materials</li>
+                        </ul>
+                        <a href="#" class="btn btn-pricing">Select Plan</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3>Professional Pass</h3>
+                            <div class="price">$299</div>
+                            <p>For security professionals</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Access to all talks</li>
+                            <li><i class="fas fa-check"></i> Village access</li>
+                            <li><i class="fas fa-check"></i> CTF participation</li>
+                            <li><i class="fas fa-check"></i> Conference swag</li>
+                            <li><i class="fas fa-check"></i> Workshop materials</li>
+                            <li><i class="fas fa-check"></i> Networking events</li>
+                        </ul>
+                        <a href="#" class="btn btn-pricing">Select Plan</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>VIP Pass</h3>
+                            <div class="price">$599</div>
+                            <p>Premium experience</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Professional benefits</li>
+                            <li><i class="fas fa-check"></i> VIP lounge access</li>
+                            <li><i class="fas fa-check"></i> Speaker meet & greet</li>
+                            <li><i class="fas fa-check"></i> Premium swag bag</li>
+                            <li><i class="fas fa-check"></i> Reserved seating</li>
+                            <li><i class="fas fa-check"></i> Conference recording</li>
+                        </ul>
+                        <a href="#" class="btn btn-pricing">Select Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p>Have questions? We'd love to hear from you.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p>info@cybercon.org</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h5>Phone</h5>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h5>Location</h5>
+                                <p>University of Utah<br>Salt Lake City, UT 84112</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4>CYBER<span class="highlight">CON</span></h4>
+                    <p>The premier cybersecurity conference bringing together industry leaders, researchers, and enthusiasts.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#speakers">Speakers</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="#sponsors">Sponsors</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Venue</a></li>
+                        <li><a href="#">Travel Info</a></li>
+                        <li><a href="#">Archives</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Code of Conduct</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Connect</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Media Kit</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="copyright">
+                        © 2025 CyberCon Conference. All rights reserved. | Organized by Cybersecurity Club - University of Utah
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="cybercon-script.js"></script>
+</body>
+</html>
