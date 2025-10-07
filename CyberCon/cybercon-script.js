@@ -84,9 +84,9 @@ function createParticles() {
         particle.style.top = Math.random() * 100 + '%';
         particle.style.boxShadow = '0 0 10px rgba(0, 212, 255, 0.5)';
         
-        // Random animation
-        const duration = Math.random() * 20 + 10;
-        const delay = Math.random() * 5;
+        // Random animation - very fast and dynamic
+        const duration = Math.random() * 4 + 2; // Changed to 2-6s for much faster movement
+        const delay = Math.random() * 1; // Changed to 0-1s for immediate action
         
         particle.style.animation = `floatParticle ${duration}s ${delay}s infinite ease-in-out`;
         

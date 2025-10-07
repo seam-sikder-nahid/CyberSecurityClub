@@ -170,16 +170,53 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
     margin-bottom: 1rem;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: .15em;
     line-height: 1.2;
-    animation: fadeInUp 1s ease;
+    color: #ffffff;
+    overflow: hidden;
+    border-right: .15em solid #0047AB;
+    white-space: nowrap;
+    margin: 0 auto;
+    text-shadow: 
+        0 0 10px #0047AB,
+        0 0 20px #0047AB,
+        0 0 30px #0047AB,
+        0 0 40px #0047AB,
+        -1px -1px 0 #0047AB,
+        1px -1px 0 #0047AB,
+        -1px 1px 0 #0047AB,
+        1px 1px 0 #0047AB;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+    position: relative;
+}
+
+.hero-title::before,
+.hero-title::after {
+    display: none;
 }
 
 .hero-title .year {
     display: block;
     font-size: 3rem;
-    color: var(--gray-text);
+    color: #ffffff;
     margin-top: 0.5rem;
+    text-shadow: 
+        0 0 10px #0047AB,
+        0 0 20px #0047AB,
+        0 0 30px #0047AB,
+        -1px -1px 0 #0047AB,
+        1px -1px 0 #0047AB,
+        -1px 1px 0 #0047AB,
+        1px 1px 0 #0047AB;
+    overflow: hidden;
+    border-right: .15em solid #0047AB;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: 
+        typing-year 2s steps(4, end) 3.5s both,
+        blink-caret .75s step-end infinite;
 }
 
 .hero-subtitle {
@@ -1107,6 +1144,131 @@ section {
 /* ===================================
    Animations
    =================================== */
+
+/* Glitch Effect */
+@keyframes glitchText {
+    0%, 90%, 100% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+}
+
+@keyframes glitchTop {
+    0%, 90%, 100% {
+        transform: translate(0);
+    }
+    10% {
+        transform: translate(-5px, -5px);
+    }
+    20% {
+        transform: translate(5px, 5px);
+    }
+    30% {
+        transform: translate(-3px, 3px);
+    }
+    40% {
+        transform: translate(3px, -3px);
+    }
+}
+
+@keyframes glitchBottom {
+    0%, 90%, 100% {
+        transform: translate(0);
+    }
+    15% {
+        transform: translate(5px, -5px);
+    }
+    25% {
+        transform: translate(-5px, 5px);
+    }
+    35% {
+        transform: translate(3px, 3px);
+    }
+    45% {
+        transform: translate(-3px, -3px);
+    }
+}
+
+/* Neon Pulse Effect */
+@keyframes neonPulse {
+    0%, 100% {
+        text-shadow: 
+            0 0 10px var(--accent-color),
+            0 0 20px var(--accent-color),
+            0 0 30px var(--accent-color),
+            0 0 40px var(--primary-color),
+            0 0 70px var(--primary-color);
+    }
+    50% {
+        text-shadow: 
+            0 0 20px var(--accent-color),
+            0 0 30px var(--accent-color),
+            0 0 40px var(--accent-color),
+            0 0 50px var(--primary-color),
+            0 0 80px var(--primary-color),
+            0 0 100px var(--primary-color);
+    }
+}
+
+/* Neon Glow for Year */
+@keyframes neonGlow {
+    0%, 100% {
+        text-shadow: 
+            0 0 10px var(--accent-orange),
+            0 0 20px var(--accent-orange),
+            0 0 30px var(--accent-color);
+    }
+    50% {
+        text-shadow: 
+            0 0 20px var(--accent-orange),
+            0 0 30px var(--accent-orange),
+            0 0 40px var(--accent-color),
+            0 0 50px var(--accent-color);
+    }
+}
+
+/* Typewriter Effect */
+@keyframes typing {
+    from { 
+        width: 0;
+    }
+    to { 
+        width: 100%;
+    }
+}
+
+/* Typewriter Effect for Year */
+@keyframes typing-year {
+    from { 
+        width: 0;
+    }
+    to { 
+        width: 100%;
+    }
+}
+
+/* The typewriter cursor blink effect */
+@keyframes blink-caret {
+    from, to { 
+        border-color: transparent;
+    }
+    50% { 
+        border-color: #0047AB;
+    }
+}
+
+/* Existing animations */
 @keyframes pulse {
     0%, 100% {
         transform: scale(1);
