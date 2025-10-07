@@ -65,28 +65,28 @@ scrollTopBtn.addEventListener('click', function() {
 });
 
 // ===================================
-// Particle Animation for Hero
+// Particle Animation for Hero - Subtle minimalist style
 // ===================================
 function createParticles() {
     const particlesContainer = document.getElementById('particles');
     if (!particlesContainer) return;
     
-    const particleCount = 50;
+    const particleCount = 30; // Reduced for minimalist look
     
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.style.position = 'absolute';
-        particle.style.width = Math.random() * 4 + 1 + 'px';
+        particle.style.width = Math.random() * 2 + 1 + 'px'; // Smaller particles
         particle.style.height = particle.style.width;
-        particle.style.background = 'rgba(0, 212, 255, ' + (Math.random() * 0.5 + 0.3) + ')';
+        particle.style.background = 'rgba(255, 255, 255, ' + (Math.random() * 0.2 + 0.1) + ')'; // White, subtle
         particle.style.borderRadius = '50%';
         particle.style.left = Math.random() * 100 + '%';
         particle.style.top = Math.random() * 100 + '%';
-        particle.style.boxShadow = '0 0 10px rgba(0, 212, 255, 0.5)';
+        particle.style.boxShadow = '0 0 5px rgba(255, 255, 255, 0.2)';
         
-        // Random animation - very fast and dynamic
-        const duration = Math.random() * 4 + 2; // Changed to 2-6s for much faster movement
-        const delay = Math.random() * 1; // Changed to 0-1s for immediate action
+        // Slow, subtle animation
+        const duration = Math.random() * 10 + 15; // Slower: 15-25s
+        const delay = Math.random() * 3;
         
         particle.style.animation = `floatParticle ${duration}s ${delay}s infinite ease-in-out`;
         
@@ -103,13 +103,13 @@ style.textContent = `
             opacity: 0;
         }
         10% {
-            opacity: 1;
+            opacity: 0.3;
         }
         90% {
-            opacity: 1;
+            opacity: 0.3;
         }
         100% {
-            transform: translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px);
+            transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px);
             opacity: 0;
         }
     }
@@ -502,4 +502,139 @@ function startCountdown(targetDate) {
 // Example: Start countdown to September 15, 2025
 // startCountdown(new Date('September 15, 2025 09:00:00').getTime());
 
-console.log('CyberCon 2025 - Website Loaded Successfully! 🚀');
+// Typewriter Effect for Hero Title
+var TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+    }
+
+    setTimeout(function() {
+        that.tick();
+    }, delta);
+};
+
+window.addEventListener('DOMContentLoaded', function() {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+    }
+    // CSS is now in cybercon-style.css - no need to inject
+});
+
+// ===================================
+// Hero Slideshow Functionality
+// ===================================
+let slideIndex = 1;
+let slideTimer;
+
+// Initialize slideshow when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    showSlide(slideIndex);
+    // Auto-advance slides every 5 seconds
+    startAutoSlide();
+});
+
+function changeSlide(n) {
+    clearTimeout(slideTimer);
+    showSlide(slideIndex += n);
+    startAutoSlide();
+}
+
+function currentSlide(n) {
+    clearTimeout(slideTimer);
+    showSlide(slideIndex = n);
+    startAutoSlide();
+}
+
+function showSlide(n) {
+    let slides = document.getElementsByClassName("slide");
+    let indicators = document.getElementsByClassName("indicator");
+    
+    if (!slides.length) return; // Exit if no slides found
+    
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    
+    // Mark current active slide to slide out to the left
+    for (let i = 0; i < slides.length; i++) {
+        if (slides[i].classList.contains("active")) {
+            slides[i].classList.add("slide-out");
+            slides[i].classList.remove("active");
+        }
+    }
+    
+    // Deactivate all indicators
+    for (let i = 0; i < indicators.length; i++) {
+        indicators[i].classList.remove("active");
+    }
+    
+    // Set new slide as active (slides in from right)
+    slides[slideIndex - 1].classList.remove("slide-out");
+    slides[slideIndex - 1].classList.add("active");
+    
+    // Activate current indicator
+    if (indicators.length > 0) {
+        indicators[slideIndex - 1].classList.add("active");
+    }
+}
+
+function startAutoSlide() {
+    slideTimer = setTimeout(function() {
+        slideIndex++;
+        showSlide(slideIndex);
+        startAutoSlide();
+    }, 5000); // Change slide every 5 seconds
+}
+
+// Pause slideshow on hover
+document.addEventListener('DOMContentLoaded', function() {
+    const slideshow = document.querySelector('.hero-slideshow');
+    if (slideshow) {
+        slideshow.addEventListener('mouseenter', function() {
+            clearTimeout(slideTimer);
+        });
+        
+        slideshow.addEventListener('mouseleave', function() {
+            startAutoSlide();
+        });
+    }
+});
