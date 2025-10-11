@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>15 Essential Linux Commands for Beginners | CSC Blog</title>
+  <meta name="description" content="A comprehensive walkthrough of the top Linux with practical examples.">
+  <meta name="keywords" content="Linux Commands for Beginners, penetration testing, security vulnerabilities">
+  <meta property="og:title" content="15 Essential Linux Commands for Beginners">
+  <meta property="og:description" content="Learn about the 15 Essential Linux Commands with practical examples.">
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../NewsPortal/news-portal.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="header">
+    <div class="header-wrapper">
+      <div class="header-image-container">
+        <a rel="author" href="../index.html" title="Cyber Security Club Homepage">
+          <div class="header-image"></div>
+        </a>
+      </div>
+      <ul class="navbar-links">
+        <li><a href="../index.html"><span class="navbar-slash">|</span>Home</a></li>
+        <li><a href="../about.html"><span class="navbar-slash">|</span>About</a></li>
+        <li><a href="../advisor.html"><span class="navbar-slash">|</span>Advisor</a></li>
+        <li class="dropdown">
+          <a href="../CTF.html"><span class="navbar-slash">|</span><span>CTF</span></a>
+          <div class="dropdown-content">
+            <a href="http://ctf-cybersecurity-club-uttara.duckdns.org/scoreboard">Dashboard</a>
+            <a href="../CTFWeekly.html">Weekly CTFs</a>
+            <a href="../CTFMonthly.html">Monthly CTFs</a>
+            <a href="../CTFWriteups.html">Writeups</a>
+          </div>
+        </li>
+        <li><a href="../events.html"><span class="navbar-slash">|</span>Events</a></li>
+        <li><a href="../gallery.html"><span class="navbar-slash">|</span>Gallery</a></li>
+        <li><a href="../groups.html"><span class="navbar-slash">|</span>Groups</a></li>
+        <li><a href="../resources.html"><span class="navbar-slash">|</span>Resources</a></li>
+        <li><a href="../sponsors.html"><span class="navbar-slash">|</span>Sponsors</a></li>
+        <li class="dropdown">
+          <a href="#" class="active-nav-link">
+            <span class="navbar-slash">|</span>
+            <span>Article</span>
+          </a>
+          <div class="dropdown-content">
+            <a href="../NewsPortal/News.html">News</a>
+            <a href="../NewsPortal/News.html#highlights">Highlights</a>
+            <a href="../blog.html">Blog</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="../MemberShip.html"><span class="navbar-slash">|</span><span>Membership</span></a>
+          <div class="dropdown-content">
+            <a href="../MemberShip.html">Membership Process</a>
+            <a href="../recruitment.html">Join Us</a>
+          </div>
+        </li>
+      </ul>
+      <div class="navbar-controls">
+        <div class="navbar-burger">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="news-detail-main" id="main-content">
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="../blog.html">Blog</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">Linux Commands Beginner</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Article -->
+    <article class="news-article">
+      <div class="container">
+        <header class="article-header">
+          <div class="article-meta">
+            <span class="article-category">Tutorial</span>
+            <span class="article-date"><i class="fas fa-calendar"></i> October 11, 2025</span>
+            <span class="article-author"><i class="fas fa-user"></i> <a href="https://www.facebook.com/seam.sikder.nahid.15" target="_blank">Seam Sikder Nahid</a></span>
+            <span class="article-date"><i class="fas fa-clock"></i> 10 min read</span>
+          </div>
+          <h1 class="article-title">15 Essential Linux Commands for Beginners</h1>
+        </header>
+
+        <div class="article-image">
+          <img src="./images/Linux.gif" alt="Linux Commands for Beginner">
+        </div>
+
+        <div class="article-content">
+          <div class="article-text">
+
+
+<h2>Why Learn Linux Commands </h2>
+<ul>
+<li>Linux is everywhere: From servers and cloud VMs to routers and CTF boxes, Linux powers the systems you’ll study and defend.</li>
+<li>You think in steps, the shell does the work: Commands are small building blocks. By combining them with pipes and redirection, you automate real tasks quickly.</li>
+<li>Speed & precision for security work: CLI tools are fast, scriptable, and reproducible—perfect for evidence-based workflow.</li>
+<li>Clarity and repeatability: Every command you run leaves a trail you can document, repeat, and share with your team.</li>
+<li>Confidence & control: Knowing what a command does (and its flags) means fewer surprises.</li>
+<li>Career advantage: Whether you become a SOC analyst, pentester, DFIR specialist, or DevOps engineer, solid command-line skills are expected and respected.</li>
+</ul>
+
+<p><b>Tips:</b> Always test new commands in a safe directory such as <code>~/playground</code>.</p>
+
+<h2>The 15 Commands (Detailed for Beginners)</h2>
+
+<h3>1. ls — list files and folders</h3>
+<p><b>Why:</b> This command is your window into the filesystem. It shows you what files and directories exist
+where you are. Without it, you’d be navigating blind. With options, it reveals permissions, hidden files, file
+sizes, and timestamps, which are crucial for understanding context during security investigations or project
+work.</p>
+<pre><code>ls -lah</code></pre>
+<pre><code>ls -l /etc</code></pre>
+
+<h3>2. pwd — show current directory</h3>
+<p><b>Why:</b> Linux doesn’t always display your full path in the prompt. pwd is like GPS—it tells you your exact
+location in the filesystem. This helps when writing scripts, because relative paths can get confusing.
+Beginners often get lost, and pwd quickly clears up where you are.</p>
+<pre><code>pwd</code></pre>
+
+<h3>3. cd — move around directories</h3>
+<p><b>Why:</b> This is your movement tool. Without cd, you can’t explore or manage different folders. It teaches
+beginners how paths work: absolute (/home/user/docs) vs relative (../docs). It also introduces shortcuts
+like cd ~ (home) and cd - (previous folder).</p>
+<pre><code>cd /var/log</code></pre>
+<code><pre>cd .. </code></pre>
+<code><pre>cd ~ </code></pre>
+<code><pre>cd -</code></pre>
+
+<h3>4. mkdir — create directories</h3>
+<p><b>Why:</b> Organization matters. mkdir helps you structure your workspace—separate logs, scripts, and
+reports. Beginners learn that Linux folders don’t magically appear; you must create them. With -p, you can
+build nested folders in one step.</p>
+<pre><code>mkdir notes</code></pre>
+<pre><code>mkdir -p lab/day1/screenshots</code></pre>
+
+<h3>5. cp — copy files and directories</h3>
+<p><b>Why:</b> Beginners often worry about overwriting or losing data. cp lets you make safe copies first. This
+builds confidence: test on the copy, not the original. In security work, analysts duplicate evidence before
+examining it, so they don’t alter the source file.</p>
+<pre><code>cp report.txt report.bak.txt</code></pre>
+<pre><code>cp -r src/ src_backup/</code></pre>
+
+<h3>6. mv — move or rename</h3>
+<p><b>Why:</b> Renaming files clearly helps with version control (draft.txt → final.txt). Moving lets you rearrange
+your workspace. Beginners quickly realize how tidy naming avoids confusion later. In Linux, mv is both
+‘move’ and ‘rename’.</p>
+<pre><code>mv draft.txt final.txt</code></pre>
+<pre><code>mv final.txt docs/</code></pre>
+
+<h3>7. rm — delete files and folders</h3>
+<p><b>Why:</b> This teaches respect. rm permanently deletes—there’s no recycle bin. Beginners learn to
+double-check names. Adding -i makes Linux ask before each deletion, a good habit. In cybersecurity, safe
+deletion also matters for sensitive files.</p>
+<pre><code>rm old.txt</code></pre>
+<pre><code>rm -r tmp_dir</code></pre>
+<pre><code>rm -i important.txt</code></pre>
+
+<h3>8. cat — quick view of file content</h3>
+<p><b>Why:</b> Beginners often want to ‘open’ a file. cat streams its content directly in the terminal—simple and fast
+for small files. It helps students understand text-based configuration and logs. Later, they can combine it
+with grep for searching.</p>
+<pre><code>cat README.md</code></pre>
+
+<h3>9. grep — search text by pattern</h3>
+<p><b>Why:</b> Logs are huge. grep gives beginners a flashlight in the dark—it highlights the lines that matter. This
+is one of the first ‘power tools’ they’ll love: simple keyword search, case-insensitive matching, or combined
+with pipes.</p>
+<pre><code>grep -in "error" /var/log/syslog</code></pre>
+<pre><code>dmesg | grep -i usb</code></pre>
+
+<h3>10. man — built-in manuals</h3>
+<p><b>Why:</b> Instead of Googling, beginners can type man. It’s a self-contained library of help. This teaches
+self-reliance: every command documents itself. Students also learn how to navigate manuals with arrows,
+search (/word), and quit (q).</p>
+<pre><code>man ls</code></pre>
+
+<h3>11. ps — list running processes</h3>
+<p><b>Why:</b> Linux systems often run many processes silently. ps teaches beginners that every task has a PID
+(process ID). It’s the foundation for managing performance or killing frozen apps. In forensics, it helps
+identify suspicious activity.</p>
+<pre><code>ps aux | head</code></pre>
+<pre><code>ps aux | grep ssh</code></pre>
+
+<h3>12. touch — create files</h3>
+<p><b>Why:</b> This is the simplest way to create a file without opening an editor. It’s useful for quick tests, empty
+placeholders, or preparing files to edit later. Beginners see that in Linux, everything starts as a file.</p>
+<pre><code>touch todo.txt</code></pre>
+
+<h3>13. wget — download files</h3>
+<p><b>Why:</b> Instead of using a browser, wget shows beginners how to fetch directly from the internet. It’s great
+for pulling scripts, wordlists, or packages during CTFs. It also introduces the idea of URLs as resources.</p>
+<pre><code>wget https://example.com/sample.txt</code></pre>
+
+<h3>14. df — check disk usage</h3>
+<p><b>Why:</b> Storage errors confuse beginners. df gives a clear picture of what’s full. With -h, it shows gigabytes
+instead of raw bytes. Understanding disk space is crucial for avoiding crashes during labs or real
+operations.</p>
+<pre><code>df -h</code></pre>
+
+<h3>15. wc — count lines, words, and characters</h3>
+<p><b>Why:</b> Beginners often underestimate how useful quick statistics are. wc counts words, lines, and
+characters. It’s perfect for checking log size, analyzing datasets, or even verifying if a file contains
+expected data.</p>
+<pre><code>wc -l access.log</code></pre>
+<pre><code>wc -w notes.txt</code></pre>
+<pre><code>wc -m notes.txt</code></pre>
+
+<h2>Quick Cheat Sheet</h2>
+<ul>
+<li>List : <code>ls -lah</code></li>
+<li>Where am I : <code>pwd</code></li>
+<li>Move : <code>cd</code>, <code>mv</code></li>
+<li>Make folder : <code>mkdir -p path/to/new</code></li>
+<li>Copy : <code>cp file dest</code> | <code>cp -r dir dest</code></li>
+<li>Delete : <code>rm file</code> | <code>rm -r dir</code> | <code>rm -i</code></li>
+<li>View : <code>cat file</code></li>
+<li>Search : <code>grep -in "text" file</code></li>
+<li>Processes : <code>ps aux | grep name</code></li>
+<li>Disk space : <code>df -h</code></li>
+<li>New file : <code>touch file</code></li>
+<li>Download : <code>wget URL</code></li>
+<li>Count : <code>wc -l/-w/-m file</code></li>
+<li>Help : <code>man &lt;command&gt;</code></li>
+</ul>
+
+<h2>Safety First</h2>
+<ul>
+<li>Work in a sandbox: Use <code>~/playground</code> for learning.</li>
+<li>Use <code>rm -i</code>: Confirm before deletion.</li>
+<li>Avoid <code>sudo</code>: Don’t run as root unless needed.</li>
+
+</ul>
+
+
+
+
+          <!-- Article Tags -->
+          <div class="article-tags">
+            <h4>Tags</h4>
+            <div class="tag-list">
+              <span class="tag">Linux</span>
+              <span class="tag">OS</span>
+              <span class="tag">Penetration Testing</span>
+              <span class="tag">Security Best Practices</span>
+              <span class="tag">Tutorial</span>
+            </div>
+          </div>
+
+          <!-- Share Section -->
+          <div class="article-share">
+            <h4>Share this article</h4>
+            <div class="share-buttons">
+              <a href="#" class="share-btn facebook" onclick="shareOnFacebook(); return false;">
+                <i class="fab fa-facebook-f"></i> Facebook
+              </a>
+              <a href="#" class="share-btn twitter" onclick="shareOnTwitter(); return false;">
+                <i class="fab fa-twitter"></i> Twitter
+              </a>
+              <a href="#" class="share-btn linkedin" onclick="shareOnLinkedIn(); return false;">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </a>
+              <a href="#" class="share-btn copy" onclick="copyLink(); return false;">
+                <i class="fas fa-link"></i> Copy Link
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Related Articles -->
+    <section class="related-news">
+      <div class="container">
+        <h2 class="section-title">Related Articles</h2>
+        <div class="related-news-grid">
+          <article class="related-news-card">
+            <div class="related-news-image">
+              <img src="../assets/images/blog/python-security.jpg" alt="Python Security">
+            </div>
+            <div class="related-news-content">
+              <h3 class="related-news-title">Python Scripting for Penetration Testing</h3>
+              <p class="related-news-date"><i class="fas fa-calendar"></i> Sep 28, 2025</p>
+              <a href="python-security.html" class="related-news-link">Read More →</a>
+            </div>
+          </article>
+
+          <article class="related-news-card">
+            <div class="related-news-image">
+              <img src="../assets/images/blog/burp-suite.jpg" alt="Burp Suite">
+            </div>
+            <div class="related-news-content">
+              <h3 class="related-news-title">Burp Suite Pro: Advanced Web Testing</h3>
+              <p class="related-news-date"><i class="fas fa-calendar"></i> Sep 23, 2025</p>
+              <a href="burp-suite-guide.html" class="related-news-link">Read More →</a>
+            </div>
+          </article>
+
+          <article class="related-news-card">
+            <div class="related-news-image">
+              <img src="../assets/images/blog/linux-basics.jpg" alt="Linux Basics">
+            </div>
+            <div class="related-news-content">
+              <h3 class="related-news-title">Linux Command Line Basics for Cybersecurity</h3>
+              <p class="related-news-date"><i class="fas fa-calendar"></i> Oct 4, 2025</p>
+              <a href="linux-basics.html" class="related-news-link">Read More →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Blog -->
+    <section class="back-to-news">
+      <div class="container">
+        <a href="../blog.html" class="back-btn">
+          <i class="fas fa-arrow-left"></i>
+          Back to All Articles
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scroll to Top -->
+  <div class="scroll-to-top" id="scrollToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-wrapper">
+      <div class="footer-info-container">
+        <div class="footer-title-container">
+          <div class="footer-title">
+            <p>Cyber Security Club, Uttara University</p>
+          </div>
+          <a class="email" href="mailto:cybersecurity@club.uttara.ac.bd">
+            <div class="mail">
+              <span>Contact@CyberSecurityClub</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="footer-social-container">
+        <a class="social-link" rel="me" target="_blank" href="https://facebook.com/csc.uu.bd">
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a class="social-link" rel="me" target="_blank" href="https://www.linkedin.com/company/cscuu/?viewAsMember=true">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a class="social-link" rel="me" target="_blank" href="https://discord.gg/N83SjBHjzG">
+          <i class="fa-brands fa-discord"></i>
+        </a>
+      </div>
+      <div class="site-credit">
+        ©2025 | All rights reserved by Cyber Security Club, Uttara University
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="../assets/js/index.js"></script>
+  <script>
+    // Share functions
+    function shareOnFacebook() {
+      const url = window.location.href;
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+    }
+
+    function shareOnTwitter() {
+      const url = window.location.href;
+      const text = document.querySelector('.article-title').textContent;
+      window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    function shareOnLinkedIn() {
+      const url = window.location.href;
+      window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+    }
+
+    function copyLink() {
+      const url = window.location.href;
+      navigator.clipboard.writeText(url).then(() => {
+        alert('Link copied to clipboard!');
+      });
+    }
+
+    // Scroll to top
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+
+</html>
