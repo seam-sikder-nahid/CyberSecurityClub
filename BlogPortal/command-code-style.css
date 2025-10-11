@@ -1,0 +1,95 @@
+
+    .code-block-wrapper {
+      position: relative;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .code-block-wrapper::before {
+      content: '';
+      display: block;
+      background: linear-gradient(90deg, #ff5f56 0%, #ff5f56 12px, transparent 12px, transparent 24px, 
+                                   #ffbd2e 24px, #ffbd2e 36px, transparent 36px, transparent 48px,
+                                   #27c93f 48px, #27c93f 60px, transparent 60px);
+      background-color: #2d2d2d;
+      height: 30px;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    
+    .code-block-wrapper pre {
+      margin: 0;
+      padding: 15px 60px 15px 20px;
+      background: #1e1e1e;
+      border: none;
+      border-radius: 0 0 8px 8px;
+      overflow-x: auto;
+    }
+    
+    .code-block-wrapper pre code {
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      font-size: 14px;
+      color: #00ff00;
+      background: transparent;
+      padding: 0;
+      display: block;
+      line-height: 1.6;
+    }
+    
+    .code-block-wrapper pre code::before {
+      content: '$ ';
+      color: #4a90e2;
+      font-weight: bold;
+    }
+    
+    .copy-btn {
+      position: absolute;
+      top: 35px;
+      right: 10px;
+      background: #3a3a3a;
+      color: #fff;
+      border: 1px solid #555;
+      border-radius: 4px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      z-index: 10;
+    }
+    
+    .copy-btn:hover {
+      background: #4a4a4a;
+      border-color: #777;
+      transform: translateY(-1px);
+    }
+    
+    .copy-btn.copied {
+      background: #27c93f;
+      border-color: #27c93f;
+      color: #000;
+    }
+    
+    .copy-btn i {
+      font-size: 11px;
+    }
+    
+    /* Inline code styling */
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: #e83e8c;
+    }
+    
+    .code-block-wrapper pre code {
+      background: transparent;
+      padding: 0;
+      color: #00ff00;
+    }
